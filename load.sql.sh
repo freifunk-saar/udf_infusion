@@ -1,6 +1,6 @@
-mysql_version="$1"
-mysql_version_major=`expr $mysql_version : '\([[0-9]]*\)'`
-shift
+#mysql_version="$1"
+#mysql_version_major=`expr $mysql_version : '\([[0-9]]*\)'`
+#shift
 
 [ $# -eq 0 ] && enable_all=1
 enable_functions="$@"
@@ -44,6 +44,7 @@ if_enable "ngram" && create_function "ngram" "string"
 if_enable "noverk" && create_function "noverk" "integer"
 if_enable "percentile_cont" && create_agg_function "percentile_cont" "real"
 if_enable "percentile_disc" && create_agg_function "percentile_disc" "real"
+if_enable "percentile_disc_compat" && create_agg_function "percentile_disc_compat" "real"
 if_enable "rotbit" && create_function "rotbit" "integer"
 if_enable "rotint" && create_function "rotint" "integer"
 if_enable "rsumd" && create_function "rsumd" "real"

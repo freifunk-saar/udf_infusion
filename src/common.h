@@ -74,11 +74,13 @@ typedef long long longlong;
 #define NOT_FIXED_DEC 31
 #endif
 
+#if MARIADB_VERSION_ID <= 100300
 #if MYSQL_VERSION_ID >= 80001
 #ifdef __cplusplus
 typedef bool my_bool;
 #else
 typedef char my_bool;
+#endif
 #endif
 #endif
 

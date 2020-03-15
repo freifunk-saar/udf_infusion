@@ -23,6 +23,7 @@ udf_infusion_la_SOURCES = \
     noverk.c \
     percentile_cont.c \
     percentile_disc.c \
+    percentile_disc_compat.c \
     rotbit.c \
     rotint.c \
     rsumd.c \
